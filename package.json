@@ -1,0 +1,88 @@
+{
+  "name": "willmendesneto-playground",
+  "private": false,
+  "description": "Playground - Please do not use this package",
+  "author": "Will Mendes <willmendesneto@gmail.com>",
+  "license": "MIT",
+  "version": "5.2.2",
+  "keywords": [
+    "angular",
+    "ngx",
+    "feature-toggle",
+    "willmendesneto-playground"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willmendesneto/willmendesneto-playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/willmendesneto/willmendesneto-playground/issues"
+  },
+  "homepage": "https://github.com/willmendesneto/willmendesneto-playground#readme",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build:page": "ng build --prod --aot --sm",
+    "test": "ng test --single-run --no-progress -cc",
+    "tdd": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "build": "ng-packagr -p src/lib/ng-package.js && cp -f README.md dist",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf coverage",
+    "bundlesize": "bundlesize",
+    "editorconfig-tools-check": "editorconfig-tools check ./src/** ./e2e/** ./.circleci/**",
+    "postversion": "git push && git push --tags",
+    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
+  },
+  "dependencies": {
+    "@angular/animations": "^5.2.0",
+    "@angular/common": "^5.2.0",
+    "@angular/compiler": "^5.2.0",
+    "@angular/core": "^5.2.0",
+    "@angular/forms": "^5.2.0",
+    "@angular/http": "^5.2.0",
+    "@angular/platform-browser": "^5.2.0",
+    "@angular/platform-browser-dynamic": "^5.2.0",
+    "@angular/router": "^5.2.0",
+    "core-js": "^2.4.1",
+    "feature-toggle-service": "^3.0.0",
+    "rxjs": "^5.5.6",
+    "zone.js": "^0.8.19"
+  },
+  "devDependencies": {
+    "@angular/cli": "~1.7.3",
+    "@angular/compiler-cli": "^5.2.0",
+    "@angular/language-service": "^5.2.0",
+    "@types/jasmine": "~2.8.3",
+    "@types/jasminewd2": "~2.0.2",
+    "@types/node": "~9.6.0",
+    "bundlesize": "^0.17.0",
+    "changelog-verify": "^1.1.0",
+    "codelyzer": "^4.0.1",
+    "coveralls": "^3.0.0",
+    "editorconfig-tools": "^0.1.1",
+    "jasmine-core": "~2.8.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~2.0.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^2.2.0",
+    "protractor": "^5.3.1",
+    "semver": "^5.5.0",
+    "ts-node": "~6.0.1",
+    "tslint": "~5.9.1",
+    "typescript": "~2.5.3",
+    "version-changelog": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=6.10.2"
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/bundles/willmendesneto-playground.umd.min.js",
+      "maxSize": "839B"
+    }
+  ]
+}

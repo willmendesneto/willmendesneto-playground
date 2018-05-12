@@ -1,0 +1,33 @@
+{
+  "name": "willmendesneto-playground",
+  "private": false,
+  "description": "willmendesneto-playground",
+  "author": "Will Mendes <willmendesneto@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "angular2",
+    "ng2",
+    "ngx",
+    "feature-toggle",
+    "willmendesneto-playground"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willmendesneto/willmendesneto-playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/willmendesneto/willmendesneto-playground/issues"
+  },
+  "homepage": "https://github.com/willmendesneto/willmendesneto-playground#readme",
+  "peerDependencies": {
+    "@angular/common": "^2.3.1 || >=4.0.0 || >=5.0.0",
+    "@angular/core": "^4.2.5 || >=5.0.0"
+  },
+  "engines": {
+    "node": ">=6.10.2"
+  },
+  "dependencies": {
+    "feature-toggle-service": "^2.0.1"
+  }
+}
