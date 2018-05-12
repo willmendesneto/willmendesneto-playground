@@ -30,6 +30,7 @@
     "build": "ng-packagr -p src/lib/ng-package.js && cp -f README.md dist",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf coverage",
     "bundlesize": "bundlesize",
+    "prepublish": "build",
     "editorconfig-tools-check": "editorconfig-tools check ./src/** ./e2e/** ./.circleci/**",
     "postversion": "git push && git push --tags",
     "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
