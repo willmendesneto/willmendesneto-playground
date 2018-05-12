@@ -7,3 +7,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][]
 ### Added
 - Testing publish changes with `np`
+
+### Fixed
+- Fixing tests

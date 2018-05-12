@@ -1,1 +1,1 @@
-export * from './willmendesneto-playground.module';
+export * from './ngx-feature-toggle.module';

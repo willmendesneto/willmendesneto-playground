@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FeatureToggleProviderComponent } from './willmendesneto-playground-provider.component';
-import { FeatureToggleComponent } from './willmendesneto-playground.component';
+import { FeatureToggleProviderComponent } from './ngx-feature-toggle-provider.component';
+import { FeatureToggleComponent } from './ngx-feature-toggle.component';
 
 @NgModule({
   declarations: [
