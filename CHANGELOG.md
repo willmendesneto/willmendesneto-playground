@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
+
+## [5.2.17][] - 2018-05-13
 ### Added
 - Checking `np` again and again
 
@@ -70,7 +72,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Fixing tests
 
 
-[Unreleased]: https://github.com/willmendesneto/willmendesneto-playground/compare/v5.2.16...HEAD
+[Unreleased]: https://github.com/willmendesneto/willmendesneto-playground/compare/v5.2.17...HEAD
+[5.2.17]: https://github.com/willmendesneto/willmendesneto-playground/compare/v5.2.16...v5.2.17
 [5.2.16]: https://github.com/willmendesneto/willmendesneto-playground/compare/v5.2.15...v5.2.16
 [5.2.15]: https://github.com/willmendesneto/willmendesneto-playground/compare/v5.2.14...v5.2.15
 [5.2.14]: https://github.com/willmendesneto/willmendesneto-playground/compare/v5.2.13...v5.2.14
