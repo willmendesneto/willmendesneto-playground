@@ -33,8 +33,7 @@
     "update-library-version": "node ./scripts/build.js",
     "prepublish": "npm run build && npm run update-library-version",
     "editorconfig-tools-check": "editorconfig-tools check ./src/** ./e2e/** ./.circleci/**",
-    "postversion": "git push && git push --tags",
-    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "@angular/animations": "^5.2.0",
