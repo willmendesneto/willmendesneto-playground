@@ -4,7 +4,7 @@
   "description": "Playground - Please do not use this package",
   "author": "Will Mendes <willmendesneto@gmail.com>",
   "license": "MIT",
-  "version": "6.0.6",
+  "version": "6.0.4",
   "keywords": [
     "angular",
     "ngx",
@@ -33,7 +33,8 @@
     "update-library-version": "node ./scripts/build.js",
     "prepublish": "npm run build && npm run update-library-version",
     "editorconfig-tools-check": "editorconfig-tools check ./src/** ./e2e/** ./.circleci/**",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "version": "npm run build && npm run update-library-version"
   },
   "dependencies": {
     "@angular/animations": "^5.2.0",
