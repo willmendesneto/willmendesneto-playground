@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][]
 ### Added
 - Checking `np` again and again
+- Fixing npm script
 
 ## [5.2.19][] - 2018-05-13
 ### Added
