@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
+
+## [6.0.4][] - 2018-05-13
 ### Added
 - Hue `package-lock.json`
 
@@ -103,7 +105,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Fixing tests
 
 
-[Unreleased]: https://github.com/willmendesneto/willmendesneto-playground/compare/v6.0.3...HEAD
+[Unreleased]: https://github.com/willmendesneto/willmendesneto-playground/compare/v6.0.4...HEAD
+[6.0.4]: https://github.com/willmendesneto/willmendesneto-playground/compare/v6.0.3...v6.0.4
 [6.0.3]: https://github.com/willmendesneto/willmendesneto-playground/compare/v6.0.2...v6.0.3
 [6.0.2]: https://github.com/willmendesneto/willmendesneto-playground/compare/v6.0.1...v6.0.2
 [6.0.1]: https://github.com/willmendesneto/willmendesneto-playground/compare/v5.2.20...v6.0.1
