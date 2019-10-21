@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Fixed
+
+- New version
+
+## [8.0.2][] - 2019-10-22
+
 ## [8.0.1][] - 2019-10-22
 
 ## [1.2.1][] - 2019-10-22
@@ -76,8 +82,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [1.1.0]: https://github.com/willmendesneto/perf-marks/tree/v1.1.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.2.0...HEAD
 [1.2.0]: https://github.com/willmendesneto/perf-marks/tree/v1.2.0
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v8.0.1...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v8.0.2...HEAD
+[8.0.2]: https://github.com/willmendesneto/perf-marks/compare/v8.0.1...v8.0.2
 [8.0.1]: https://github.com/willmendesneto/perf-marks/compare/v1.2.1...v8.0.1
 [1.2.1]: https://github.com/willmendesneto/perf-marks/tree/v1.2.1
