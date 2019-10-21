@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [8.0.1][] - 2019-10-22
+
 ## [1.2.1][] - 2019-10-22
 
 ### Fixed
@@ -76,5 +78,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [1.2.0]: https://github.com/willmendesneto/perf-marks/tree/v1.2.0
 
 
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.2.1...HEAD
+[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v8.0.1...HEAD
+[8.0.1]: https://github.com/willmendesneto/perf-marks/compare/v1.2.1...v8.0.1
 [1.2.1]: https://github.com/willmendesneto/perf-marks/tree/v1.2.1
