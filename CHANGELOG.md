@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Fixed
+
+- New version
+
+## [8.0.5][] - 2019-10-22
+
+### Fixed
+
+- New version
+
 ## [8.0.4][] - 2019-10-22
 
 ### Fixed
@@ -106,3 +116,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [8.0.3]: https://github.com/willmendesneto/willmendesneto-playground/tree/v8.0.3
 [unreleased]: https://github.com/willmendesneto/willmendesneto-playground/compare/v8.0.4...HEAD
 [8.0.4]: https://github.com/willmendesneto/willmendesneto-playground/tree/v8.0.4
+[unreleased]: https://github.com/willmendesneto/willmendesneto-playground/compare/v8.0.5...HEAD
+[8.0.5]: https://github.com/willmendesneto/willmendesneto-playground/tree/v8.0.5
