@@ -1,40 +1,112 @@
 {
   "name": "willmendesneto-playground",
-  "description": "Angular module for Page Scroll locking",
   "version": "8.0.0",
-  "peerDependencies": {
-    "@angular/common": "^7.1.0",
-    "@angular/core": "^7.1.0"
-  },
-  "license": "MIT",
-  "keywords": [
-    "angular",
-    "ng",
-    "ngx",
-    "scroll lock",
-    "lock",
-    "locker",
-    "ngx-scroll-lock"
-  ],
+  "author": "Will Mendes <willmendesneto@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/willmendesneto/ngx-scroll-lock.git"
+    "url": "https://github.com/willmendesneto/willmendesneto-playground.git"
   },
-  "bugs": {
-    "url": "https://github.com/willmendesneto/ngx-scroll-lock/issues"
+  "license": "MIT",
+  "main": "dist/umd/index.js",
+  "jsnext:main": "dist/es2015/index.js",
+  "module": "dist/es2015/index.js",
+  "cjs": "dist/cjs/index.js",
+  "types": "dist/umd/index.d.ts",
+  "keywords": [
+    "willmendesneto-playground",
+    "performance",
+    "user timing api",
+    "timing",
+    "api"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-modules-umd": "^7.2.0",
+    "@babel/preset-env": "^7.6.3",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.0.10",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "babel-jest": "^24.9.0",
+    "bundlesize": "^0.18.0",
+    "changelog-verify": "^1.1.0",
+    "coveralls": "^3.0.7",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-compat": "^3.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.4",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "jsdom": "^15.2.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.4.3",
+    "typings": "^2.1.1",
+    "usertiming": "^0.1.8",
+    "version-changelog": "^3.1.0"
   },
-  "homepage": "https://github.com/willmendesneto/ngx-scroll-lock#readme",
-  "main": "bundles/ngx-scroll-lock.umd.js",
-  "module": "fesm5/ngx-scroll-lock.js",
-  "es2015": "fesm2015/ngx-scroll-lock.js",
-  "esm5": "esm5/ngx-scroll-lock.js",
-  "esm2015": "esm2015/ngx-scroll-lock.js",
-  "fesm5": "fesm5/ngx-scroll-lock.js",
-  "fesm2015": "fesm2015/ngx-scroll-lock.js",
-  "typings": "ngx-scroll-lock.d.ts",
-  "metadata": "ngx-scroll-lock.metadata.json",
-  "sideEffects": false,
-  "dependencies": {
-    "tslib": "^1.9.0"
-  }
+  "engines": {
+    "node": ">=6.10.2"
+  },
+  "scripts": {
+    "compile": "tsc",
+    "clean": "rm -rf ./dist ./.jest ./coverage ./lib ./marks.* ./entries.*",
+    "build": "yarn build:es2015 && yarn build:cjs && yarn build:esm",
+    "build:umd": "tsc --module esnext --target ES5 --outDir dist/umd && babel dist/umd --out-dir dist/umd",
+    "build:es2015": "tsc --module es2015 --target es2015 --outDir dist/es2015",
+    "build:esm": "tsc --module esnext --target esnext --outDir dist/esm && yarn build:entrypoints:clean && yarn build:entrypoints",
+    "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs",
+    "build:entrypoints:clean": "rm -rf ./dist/umd/entrypoints ./dist/cjs/entrypoints ./dist/es2015/entrypoints",
+    "build:entrypoints": "node ./scripts/build-entrypoints.js",
+    "test": "jest",
+    "pretest:ci": "yarn lint",
+    "test:ci": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "check-coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf coverage",
+    "prepublish": "yarn build",
+    "generate-banner": "node ./scripts/generate-banner.js",
+    "bundlesize": "bundlesize",
+    "lint": "eslint '{scripts,src}/**/*.[tj]s'",
+    "lint:fix": "prettier --no-editorconfig --write",
+    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/esm/index.js",
+      "maxSize": "89B"
+    },
+    {
+      "path": "./dist/es2015/index.js",
+      "maxSize": "89B"
+    },
+    {
+      "path": "./dist/cjs/index.js",
+      "maxSize": "178B"
+    }
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --no-editorconfig --write",
+      "git add"
+    ]
+  },
+  "browserslist": [
+    "last 1 chrome versions",
+    "last 1 edge versions",
+    "last 1 firefox versions",
+    "last 1 safari versions",
+    "last 1 and_chr versions",
+    "last 1 ios_saf versions",
+    "ie 11"
+  ]
 }
