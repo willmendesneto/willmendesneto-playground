@@ -1,6 +1,6 @@
 {
   "name": "willmendesneto-playground",
-  "version": "8.0.5",
+  "version": "8.0.6",
   "author": "Will Mendes <willmendesneto@gmail.com>",
   "repository": {
     "type": "git",
@@ -72,8 +72,7 @@
     "generate-banner": "node ./scripts/generate-banner.js",
     "bundlesize": "bundlesize",
     "lint": "eslint '{scripts,src}/**/*.[tj]s'",
-    "lint:fix": "prettier --no-editorconfig --write",
-    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
+    "lint:fix": "prettier --no-editorconfig --write"
   },
   "bundlesize": [
     {
