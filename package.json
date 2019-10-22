@@ -1,6 +1,6 @@
 {
-  "name": "willmendesneto-playground",
-  "version": "8.0.6",
+  "name": "my-playground",
+  "version": "9.0.0",
   "author": "Will Mendes <willmendesneto@gmail.com>",
   "repository": {
     "type": "git",
@@ -57,21 +57,21 @@
   "scripts": {
     "compile": "tsc",
     "clean": "rm -rf ./dist ./.jest ./coverage ./lib ./marks.* ./entries.*",
-    "build": "yarn build:es2015 && yarn build:cjs && yarn build:esm",
+    "add:entrypoints": "node ./scripts/add-entrypoints.js",
+    "build": "yarn add:entrypoints && yarn build:es2015 && yarn build:cjs && yarn build:umd && yarn build:esm",
     "build:umd": "tsc --module esnext --target ES5 --outDir dist/umd && babel dist/umd --out-dir dist/umd",
     "build:es2015": "tsc --module es2015 --target es2015 --outDir dist/es2015",
-    "build:esm": "tsc --module esnext --target esnext --outDir dist/esm && yarn build:entrypoints:clean && yarn build:entrypoints",
+    "build:esm": "tsc --module esnext --target esnext --outDir dist/esm && yarn build:entrypoints && yarn build:entrypoints:clean",
     "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs",
-    "build:entrypoints:clean": "rm -rf ./dist/umd/entrypoints ./dist/cjs/entrypoints ./dist/es2015/entrypoints",
+    "build:entrypoints:clean": "rm -rf ./dist/umd/entrypoints ./dist/esm/entrypoints ./dist/cjs/entrypoints ./dist/es2015/entrypoints",
     "build:entrypoints": "node ./scripts/build-entrypoints.js",
     "test": "jest",
     "pretest:ci": "yarn lint",
     "test:ci": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "check-coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf coverage",
-    "prepublish": "yarn build",
     "generate-banner": "node ./scripts/generate-banner.js",
     "bundlesize": "bundlesize",
-    "lint": "eslint '{scripts,src}/**/*.[tj]s'",
+    "lint": "eslint '{scripts,src,entrypoints}/**/*.[tj]s'",
     "lint:fix": "prettier --no-editorconfig --write"
   },
   "bundlesize": [

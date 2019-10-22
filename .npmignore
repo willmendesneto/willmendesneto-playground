@@ -11,6 +11,7 @@
 **/__tests__/
 /out-tsc
 /images
+/entrypoints
 
 jest*.js
 tsconfig.*.json

@@ -8,6 +8,6 @@
     "sourceMap": true /* Generates corresponding '.map' file. */
   },
   "files": [],
-  "include": ["scripts/**/*", "src/**/*", "src/__tests__/**/**/*.ts", "src/**/**/*.d.ts"],
+  "include": ["scripts/**/*", "entrypoints/**/*", "src/**/*", "src/__tests__/**/**/*.ts", "src/**/**/*.d.ts"],
   "exclude": ["node_modules"]
 }
