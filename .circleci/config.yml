@@ -2,7 +2,7 @@ version: 2
 
 docker_defaults: &docker_defaults
   docker:
-    - image: circleci/node:12.11.1-browsers
+    - image: circleci/node:12.14.1-browsers
   working_directory: ~/project/repo
 
 attach_workspace: &attach_workspace
@@ -43,9 +43,6 @@ workflows:
       - bundle_size:
           requires:
             - build
-      # - end_to_end:
-      #     requires:
-      #         - build
 jobs:
   build:
     <<: *docker_defaults
@@ -67,11 +64,3 @@ jobs:
           command: |
             sudo yarn build
             sudo yarn bundlesize
-  # end_to_end:
-  #     <<: *docker_defaults
-  #     steps:
-  #         - *attach_workspace
-  #         - run:
-  #             name: Running E2E tests
-  #             command: |
-  #               sudo yarn e2e

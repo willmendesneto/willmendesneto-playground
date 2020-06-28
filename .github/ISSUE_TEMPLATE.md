@@ -12,7 +12,7 @@ Instead of '...', what I saw was that '...' happened instead.
 
 ### How to simulate the behaviour (if applicable)
 
-This is the example of the current behaviour https://stackblitz.com/edit/perf-marks-playground
+This is the example of the current behaviour https://stackblitz.com/edit/hex-to-css-filter-playground
 
 ### Browsers/OS/Platforms affected
 

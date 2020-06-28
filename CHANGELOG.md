@@ -7,123 +7,158 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
-## [8.0.6][] - 2019-10-22
+### Updated
 
-## [8.0.6][] - 2019-10-22
+- Trying new version
 
-### Fixed
-
-- New version
-
-## [8.0.5][] - 2019-10-22
-
-### Fixed
-
-- New version
-
-## [8.0.4][] - 2019-10-22
-
-### Fixed
-
-- New version
-
-## [8.0.3][] - 2019-10-22
-
-### Fixed
-
-- New version
-
-## [8.0.2][] - 2019-10-22
-
-### Fixed
-
-- New version
-
-## [8.0.1][] - 2019-10-22
-
-### Fixed
-
-- New version
-
-## [1.2.1][] - 2019-10-22
-
-### Fixed
-
-- Removing scripts and jest config from `.gitignore` file
-
-## [1.2.0][] - 2019-10-22
-
-### Removed
-
-- Removing `package.js` for meteor modules
+## [7.0.2][] - 2020-06-28
 
 ### Updated
 
-- Adding more info in `ISSUE_TEMPLATE.md`
-- Removing unnecessary files from npm pack
-- ignoring main `src/index.ts` entry file on code coverage
-- Adding `src/index.ts` entry file as main package route for resources
+- Trying new version
 
-### Added
-
-- Adding gif showing the package usage
-- Adding ESLint rule for polyfills
-- Adding entrypoints: `perf-marks/marks` and `perf-marks/entries`
-
-## [1.1.0][] - 2019-10-20
+## [3.0.1][] - 2020-06-28
 
 ### Updated
 
-- Improving CircleCI pipeline and npm scripts to run on it
-- Updating dependencies
+- Increasing `maxChecks` from 15 to 30
+- Adding private methods in classes
+- Improving internal types
+- Removing `any` from codebase
+
+## [3.0.0][] - 2020-06-25
 
 ### Fixed
 
-- Moving from Travis-CI to CircleCI to fix pipeline
-- Fixing coveralls integration
-- Fixing eslint in `scripts/generate-banner.js` file
-
-### Added
-
-- Adding `contributing.md` file and section in `README.md`
-- Adding package logo
-- Adding types for `PerfMarks.end()` response
-
-## [1.0.1][] - 2019-10-16
+- CSS Filter working properly when receives `#FFF` color;
+- Fixed internal issue on `hexToRgb` method when receiving `#FFF` and `#000` colors
 
 ### Updated
 
-- Removing sufix in `performance.measure` call
-- Removing `src/index.tx` from code coverage evaluation
-- Replacing local demo in favour of Stackblitz playground `https://stackblitz.com/edit/perf-marks-playground`
+- Breaking change: `HexToCssConfiguration` type now is using `acceptanceLossPercentage` instead of `acceptableLossPercentage`
 
-## [1.0.0][] - 2019-10-16
+```
+-  acceptableLossPercentage?: number;
++  acceptanceLossPercentage?: number;
+```
+
+- Better types for internal methods
+- Improving package documentation
+- Adding documentation for consumers to use `#000` as a container background on `README.md`
+
+## [2.0.4][] - 2020-04-24
+
+### Fixed
+
+- `Solver`: Changing default target color to be white or black, based on the
+  given color. It solves the issue when a color is darker and the returned CSS filter resolutions is incorrect.
+
+E.G. https://codepen.io/willmendesneto/pen/pOVGVe
+
+With the issue
+<img width="300" alt="Screen Shot 2020-04-24 at 3 30 48 pm" src="https://user-images.githubusercontent.com/1252570/80251321-cee4ed00-864b-11ea-9a19-3d9aa1b59341.png">
+
+Without the issue
+<img width="300" alt="Screen Shot 2020-04-24 at 3 31 42 pm" src="https://user-images.githubusercontent.com/1252570/80251331-d1474700-864b-11ea-81b4-9db409efce99.png">
+
+## [2.0.3][] - 2020-04-24
+
+### Fixed
+
+- Fixing bundle size
+- Setting the filter to white to take effect properly. Closes https://github.com/willmendesneto/hex-to-css-filter/issues/7
+
+Since `Solver` is forcing the stored instance of `color` to be white in rgb, the brightness should be white as well. That
+means the filter is based on white, so it needs to set the filter to white to take effect.
+
+https://github.com/willmendesneto/hex-to-css-filter/blob/996d0c78ba275b7c16ae3d87821dd044276db563/src/solver.ts#L136
+
+E.G.
+
+```diff
+- filter: invert(39%) sepia(91%) saturate(4225%) hue-rotate(162deg) brightness(95%) contrast(101%);
++ filter: brightness(0) invert(1) invert(39%) sepia(91%) saturate(4225%) hue-rotate(162deg) brightness(95%) contrast(101%);
+```
+
+## [2.0.2][] - 2020-04-09
+
+### Updated
+
+- Updating description
+- Removing broken link
+
+## [2.0.1][] - 2020-04-09
+
+### Updated
+
+- Bumped dependencies
+- Upgraded NodeJS to 12.14.1
+- Updated README.md with proper docs
+
+### Fixed
+
+- Fixed CircleCI pipeline
+- Fixed Uglify issue on build task
+- Fixed bundlesize task
+- Fixed ESLint issue after upgrade
+
+## [2.0.0][] - 2020-01-09
+
+### Updated
+
+- Migrating package to Typescript
+
+BREAKING CHANGE:
+
+To improve readability, these type definitions were renamed
+
+- `Option` was renamed to `HexToCssConfiguration`;
+- `ReturnValue` was renamed to `HexToCssResult`;
+
+## [1.0.3][] - 2019-12-18
 
 ### Added
 
-- Created `perf-marks` package
-- Adding `perf-marks` demo page
+- Adding typescript types for package
 
-[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/willmendesneto/perf-marks/tree/v1.0.0
-[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.0.1...HEAD
-[1.0.1]: https://github.com/willmendesneto/perf-marks/tree/v1.0.1
-[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.1.0...HEAD
-[1.1.0]: https://github.com/willmendesneto/perf-marks/tree/v1.1.0
-[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.2.0...HEAD
-[1.2.0]: https://github.com/willmendesneto/perf-marks/tree/v1.2.0
-[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v8.0.2...HEAD
-[8.0.2]: https://github.com/willmendesneto/perf-marks/compare/v8.0.1...v8.0.2
-[8.0.1]: https://github.com/willmendesneto/perf-marks/compare/v1.2.1...v8.0.1
-[1.2.1]: https://github.com/willmendesneto/perf-marks/tree/v1.2.1
-[unreleased]: https://github.com/willmendesneto/willmendesneto-playground/compare/v8.0.3...HEAD
-[8.0.3]: https://github.com/willmendesneto/willmendesneto-playground/tree/v8.0.3
-[unreleased]: https://github.com/willmendesneto/willmendesneto-playground/compare/v8.0.4...HEAD
-[8.0.4]: https://github.com/willmendesneto/willmendesneto-playground/tree/v8.0.4
-[unreleased]: https://github.com/willmendesneto/willmendesneto-playground/compare/v8.0.5...HEAD
-[8.0.5]: https://github.com/willmendesneto/willmendesneto-playground/tree/v8.0.5
+## [1.0.2][] - 2018-09-14
 
+### Updated
 
-[Unreleased]: https://github.com/willmendesneto/willmendesneto-playground/compare/v8.0.6...HEAD
-[8.0.6]: https://github.com/willmendesneto/willmendesneto-playground/compare/v8.0.6...v8.0.6
-[8.0.6]: https://github.com/willmendesneto/willmendesneto-playground/tree/v8.0.6
+- Returning RGB as an array with red, green and blue values
+
+## [1.0.1][] - 2018-09-13
+
+### Added
+
+- First version of the package
+- Adding memory cache to store the computed result
+
+### Updated
+
+- Using `Object.assign()` to return the best match object
+- Changing the color to check: from white to black
+
+### Fixed
+
+- Fixing editorconfig code style
+
+[unreleased]: https://github.com/willmendesneto/hex-to-css-filter/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/willmendesneto/hex-to-css-filter/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/willmendesneto/hex-to-css-filter/tree/v1.0.1
+[unreleased]: https://github.com/willmendesneto/hex-to-css-filter/compare/v1.0.3...HEAD
+[1.0.3]: https://github.com/willmendesneto/hex-to-css-filter/tree/v1.0.3
+[unreleased]: https://github.com/willmendesneto/hex-to-css-filter/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/willmendesneto/hex-to-css-filter/tree/v2.0.0
+[unreleased]: https://github.com/willmendesneto/hex-to-css-filter/compare/v2.0.2...HEAD
+[2.0.2]: https://github.com/willmendesneto/hex-to-css-filter/compare/v2.0.1...v2.0.2
+[2.0.1]: https://github.com/willmendesneto/hex-to-css-filter/tree/v2.0.1
+[unreleased]: https://github.com/willmendesneto/hex-to-css-filter/compare/v2.0.3...HEAD
+[2.0.3]: https://github.com/willmendesneto/hex-to-css-filter/tree/v2.0.3
+[unreleased]: https://github.com/willmendesneto/hex-to-css-filter/compare/v2.0.4...HEAD
+[2.0.4]: https://github.com/willmendesneto/hex-to-css-filter/tree/v2.0.4
+[unreleased]: https://github.com/willmendesneto/hex-to-css-filter/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/willmendesneto/hex-to-css-filter/tree/v3.0.0
+[unreleased]: https://github.com/willmendesneto/hex-to-css-filter/compare/v7.0.2...HEAD
+[7.0.2]: https://github.com/willmendesneto/hex-to-css-filter/compare/v3.0.1...v7.0.2
+[3.0.1]: https://github.com/willmendesneto/hex-to-css-filter/tree/v3.0.1
