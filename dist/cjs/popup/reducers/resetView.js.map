@@ -1,0 +1,1 @@
+{"version":3,"file":"resetView.js","sourceRoot":"","sources":["../../../../src/popup/reducers/resetView.tsx"],"names":[],"mappings":";;;AAEA,kDAAyD;AAGzD,SAAwB,SAAS,CAAC,KAAY,EAAE,MAAc;IAC5D,IAAI,6BAAiB,CAAC,MAAM,CAAC,EAAE;QAC7B,6CACK,KAAK,KACR,aAAa,EAAE,EAAE,EACjB,OAAO,EAAE,EAAE,IACX;KACH;SAAM;QACL,OAAO,KAAK,CAAC;KACd;AACH,CAAC;AAVD,4BAUC"}

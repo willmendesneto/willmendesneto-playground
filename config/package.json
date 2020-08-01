@@ -1,0 +1,7 @@
+{
+  "name": "@atlaskit/media-picker/config",
+  "main": "../dist/cjs/config.js",
+  "module": "../dist/esm/config.js",
+  "module:es2019": "../dist/es2019/config.js",
+  "types": "../dist/cjs/config.d.ts"
+}

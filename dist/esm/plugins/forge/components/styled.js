@@ -1,0 +1,12 @@
+import { __makeTemplateObject } from "tslib";
+import styled from 'styled-components';
+import { N100 } from '@atlaskit/theme/colors';
+export var PluginWrapper = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  overflow: auto;\n  height: 100%;\n"], ["\n  overflow: auto;\n  height: 100%;\n"])));
+export var PluginHeaderWrapper = styled.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 28px;\n\n  label {\n    display: none;\n  }\n\n  > div {\n    flex: initial;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 28px;\n\n  label {\n    display: none;\n  }\n\n  > div {\n    flex: initial;\n  }\n"])));
+export var PluginIcon = styled.img(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  height: 24px;\n  width: 24px;\n"], ["\n  height: 24px;\n  width: 24px;\n"])));
+export var PluginContentContainer = styled.div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  height: 100%;\n  overflow-y: scroll;\n  padding: 0 28px;\n"], ["\n  height: 100%;\n  overflow-y: scroll;\n  padding: 0 28px;\n"])));
+export var PluginErrorContainer = styled.div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  min-height: 480px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  min-height: 480px;\n"])));
+export var PluginErrorDetails = styled.div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  margin-bottom: 24px;\n"], ["\n  display: flex;\n  align-items: center;\n  margin-bottom: 24px;\n"])));
+export var PluginErrorText = styled.p(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  text-align: center;\n  font-size: 16px;\n  color: ", ";\n  margin: 0;\n  margin-left: 8px;\n"], ["\n  text-align: center;\n  font-size: 16px;\n  color: ", ";\n  margin: 0;\n  margin-left: 8px;\n"])), N100);
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7;
+//# sourceMappingURL=styled.js.map

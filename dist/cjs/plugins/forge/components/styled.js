@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var tslib_1 = require("tslib");
+var styled_components_1 = tslib_1.__importDefault(require("styled-components"));
+var colors_1 = require("@atlaskit/theme/colors");
+exports.PluginWrapper = styled_components_1.default.div(templateObject_1 || (templateObject_1 = tslib_1.__makeTemplateObject(["\n  overflow: auto;\n  height: 100%;\n"], ["\n  overflow: auto;\n  height: 100%;\n"])));
+exports.PluginHeaderWrapper = styled_components_1.default.div(templateObject_2 || (templateObject_2 = tslib_1.__makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 28px;\n\n  label {\n    display: none;\n  }\n\n  > div {\n    flex: initial;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 28px;\n\n  label {\n    display: none;\n  }\n\n  > div {\n    flex: initial;\n  }\n"])));
+exports.PluginIcon = styled_components_1.default.img(templateObject_3 || (templateObject_3 = tslib_1.__makeTemplateObject(["\n  height: 24px;\n  width: 24px;\n"], ["\n  height: 24px;\n  width: 24px;\n"])));
+exports.PluginContentContainer = styled_components_1.default.div(templateObject_4 || (templateObject_4 = tslib_1.__makeTemplateObject(["\n  height: 100%;\n  overflow-y: scroll;\n  padding: 0 28px;\n"], ["\n  height: 100%;\n  overflow-y: scroll;\n  padding: 0 28px;\n"])));
+exports.PluginErrorContainer = styled_components_1.default.div(templateObject_5 || (templateObject_5 = tslib_1.__makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  min-height: 480px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  min-height: 480px;\n"])));
+exports.PluginErrorDetails = styled_components_1.default.div(templateObject_6 || (templateObject_6 = tslib_1.__makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  margin-bottom: 24px;\n"], ["\n  display: flex;\n  align-items: center;\n  margin-bottom: 24px;\n"])));
+exports.PluginErrorText = styled_components_1.default.p(templateObject_7 || (templateObject_7 = tslib_1.__makeTemplateObject(["\n  text-align: center;\n  font-size: 16px;\n  color: ", ";\n  margin: 0;\n  margin-left: 8px;\n"], ["\n  text-align: center;\n  font-size: 16px;\n  color: ", ";\n  margin: 0;\n  margin-left: 8px;\n"])), colors_1.N100);
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7;
+//# sourceMappingURL=styled.js.map
